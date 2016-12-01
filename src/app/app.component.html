@@ -4,10 +4,11 @@
 <body>
   <div>
     <label class="labelNameClass"> {{ labelName }}</label>
-    <input class="inputClass" placeholder="      Person Name"  [(ngModel)]="searchPersonBy">
-    <button class="btn btn-primary" (click)="addPerson('dhiraj')">Add this person</button>
+    <input class="inputClass" placeholder="      Person Name" #searchByPerson  [(ngModel)]="searchPersonBy">
+    <button class="btn btn-primary" (click)="addPerson(searchByPerson.value)">Add this person</button>
   </div>
 <div *ngFor="let person of _personListService.personList">
-  {{ person.name}}{{person.address}}</div>
+  <app-person-details [person]="person" style="color:green"></app-person-details>
+  </div>
 
 </body>

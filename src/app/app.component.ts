@@ -24,6 +24,7 @@ export class AppComponent {
 
   addPerson(personName:string){
    this._personListService.addPerson(personName);
+    
   }
 
 
