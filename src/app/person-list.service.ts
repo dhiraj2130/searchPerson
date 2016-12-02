@@ -9,7 +9,6 @@ export class PersonListService {
 
   addPerson(person:string){
    this.personList = [ ...this.personList,{name:person,address:`This is person's ${person} address`}];
-    //console.log(JSON.stringify(this.personList));
   }
   getPersonList(){
     return this.personList;

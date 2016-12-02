@@ -1,0 +1,23 @@
+header {
+  color:red;
+  font-family: Helvetica;
+  align-self: center;
+
+}
+body{
+  margin:20px;
+  color:red;
+  font-family: Helvetica;
+  font-size: large;
+  align-self: center;
+
+  .labelNameClass{
+    color:#0000cc;
+  }
+  .inputClass{
+    border-color: #0000cc;
+    border-radius: 5px;
+    margin:5px;
+    height:30px;
+  }
+}

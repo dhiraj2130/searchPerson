@@ -5,18 +5,20 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PersonListService } from './person-list.service';
-import { PersonDetailsComponent } from './person-details/person-details.component';
 
+import  appRoutes  from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonDetailsComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+      appRoutes
   ],
   providers: [PersonListService],
   bootstrap: [AppComponent]
