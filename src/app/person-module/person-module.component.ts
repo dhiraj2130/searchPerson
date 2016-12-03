@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import { Person } from './models/Person';
 import { PeopleAccessService, AppStore} from './people-access.service';
-import { Store } from '@ngrx/Store';
+//import { Store } from '@ngrx/Store';
 
 @Component({
    selector: 'app-person-module',
@@ -23,8 +23,9 @@ export class PersonModuleComponent implements OnInit {
  
 
   constructor(/*personListService:PersonListService,*/
-              private _peopleAccessService:PeopleAccessService,
-              private _store:Store<AppStore>){
+              private _peopleAccessService:PeopleAccessService
+      //,             private _store:Store<AppStore>
+  ){
     
     this.peopleAccessService = _peopleAccessService;
     //this.store = _store;

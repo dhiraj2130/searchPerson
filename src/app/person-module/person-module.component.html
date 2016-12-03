@@ -8,8 +8,10 @@
   <input class="inputClass" placeholder="      Person Name" #searchByPerson  [(ngModel)]="searchPersonBy">
   <button class="btn btn-primary" (click)="addPerson(searchByPerson.value)">Add this person</button>
 </div>
-<div *ngFor="let person of _personListService.personList">
-  <app-person-details [person]="person" style="color:green"></app-person-details>
-</div>
+<!--<div *ngFor="let person of _personListService.personList">-->
+  <!--<div *ngFor="let person of (personList | async )">-->
+<!--{{ person.id }}  {{ person.name}}-->
+  <!--&lt;!&ndash;<app-person-details [person]="person" style="color:green"></app-person-details>&ndash;&gt;-->
+<!--</div>-->
 
 </body>

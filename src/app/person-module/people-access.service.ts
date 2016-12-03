@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Store } from '@ngrx/store';
+import { Store } from '@ngrx/Store';
 import { Person } from "./models/Person";
 import { Observable } from "rxjs/Observable";
 
