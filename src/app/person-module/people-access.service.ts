@@ -16,12 +16,16 @@ export class PeopleAccessService {
 
 
   personList: Observable<Array<Person>>;
-  
+  store:Store<AppStore>;
   constructor(private _store:Store<AppStore>) {
+    this.store = _store;
   this.personList = _store.select('people');
     // the above is somehow equivalent to 
     // this.personList = _store.map(state => state['person']);
     
+  }
+  addPerson(person:Person){
+    this.store.dispatch(({type:"ADD",payload:person}))
   }
 }
 

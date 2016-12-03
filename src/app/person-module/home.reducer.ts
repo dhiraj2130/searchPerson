@@ -1,5 +1,5 @@
 
-export const people = (state =[{id:"100",name:"dhiraj"}],action) => {
+export const people = (state =[],action) => {
     
     switch(action.type){
         case "ADD":

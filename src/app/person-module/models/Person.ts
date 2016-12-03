@@ -6,3 +6,15 @@ export interface Person{
     name:string;
     address:string;
 }
+
+export class PersonClass  implements Person{
+
+    id = 0;
+    name ="defaultname";
+    address ="defaultaddress"
+    constructor(id,name,address){
+        this.id = id;
+        this.name =name;
+        this.address = address;
+    }
+}

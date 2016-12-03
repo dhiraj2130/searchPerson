@@ -5,13 +5,14 @@
 <body>
 <div>
   <label class="labelNameClass"> {{ labelName }}</label>
-  <input class="inputClass" placeholder="      Person Name" #searchByPerson  [(ngModel)]="searchPersonBy">
-  <button class="btn btn-primary" (click)="addPerson(searchByPerson.value)">Add this person</button>
+  <input class="inputClass" placeholder="      Person Name" #searchByPerson  [(ngModel)]="name">
+  <input class="inputClass" placeholder="      Person Address" #personAddress  [(ngModel)]="address">
+  <button class="btn btn-primary" (click)="addPerson()">Add this person</button>
 </div>
-<!--<div *ngFor="let person of _personListService.personList">-->
-  <!--<div *ngFor="let person of (personList | async )">-->
-<!--{{ person.id }}  {{ person.name}}-->
+
+  <div *ngFor="let person of (personList | async )">
+{{ person.id }}  {{ person.name}} {{person.address}}
   <!--&lt;!&ndash;<app-person-details [person]="person" style="color:green"></app-person-details>&ndash;&gt;-->
-<!--</div>-->
+</div>
 
 </body>

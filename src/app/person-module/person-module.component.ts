@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 //import { PersonListService } from '../person-list.service';
 import { Observable } from "rxjs/Observable";
-import { Person } from './models/Person';
+import { Person, PersonClass } from './models/Person';
 import { PeopleAccessService, AppStore} from './people-access.service';
 //import { Store } from '@ngrx/Store';
+
+
 
 @Component({
    selector: 'app-person-module',
   templateUrl: './person-module.component.html',
   styleUrls: ['./person-module.component.scss']
 })
+
+
+
 export class PersonModuleComponent implements OnInit {
 
-  searchPersonBy:string
-  labelName:string
+    person:PersonClass;
+    id:number;
+    name:string;
+    address:string;
+   labelName:string
   //addPerson:string
   personList:Observable<Array<Person>>;
   selectedPerson:Observable<Person>;
@@ -34,12 +42,16 @@ export class PersonModuleComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.searchPersonBy = null;
-    this.labelName = 'Enter Person Name to Search';
+   // this.searchPersonBy = null;
+    this.labelName = 'Enter Person details to add';
+      this.id =0;
   }
 
-  addPerson(personName:string){
-    //this._personListService.addPerson(personName);
+  addPerson(){
+      this.person = new PersonClass(this.id++,this.name,this.address);
+      //this.person.id = this.id++;
+      //person:Person = {id:this.id++,name:this.personName,address:this.personAddress}
+      this.peopleAccessService.addPerson(this.person);
   }
 
 
