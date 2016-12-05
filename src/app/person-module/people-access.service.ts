@@ -27,8 +27,8 @@ export class PeopleAccessService {
   addPerson(person:Person){
     this.store.dispatch(({type:"ADD",payload:person}))
   }
-  deletePerson(id:number){
-    this.store.dispatch({type:"DELETE",payload:id})
+  deletePerson(_id:number){
+    this.store.dispatch({type:"DELETE",payload:{id:_id}})
   }
 }
 
