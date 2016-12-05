@@ -12,6 +12,7 @@
 
   <div *ngFor="let person of (personList | async )">
 {{ person.id }}  {{ person.name}} {{person.address}}
+    <button class="btn btn-primary" (click)="deletePerson(person.id)">Delete this Person</button>
   <!--&lt;!&ndash;<app-person-details [person]="person" style="color:green"></app-person-details>&ndash;&gt;-->
 </div>
 

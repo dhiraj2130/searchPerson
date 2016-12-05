@@ -42,4 +42,7 @@ export class PersonModuleComponent implements OnInit {
       this.person = new PersonClass(this.id++,this.name,this.address);
       this.peopleAccessService.addPerson(this.person);
   }
+    deletePerson(id:Number){
+        this.peopleAccessService.deletePerson(id);
+    }
 }
