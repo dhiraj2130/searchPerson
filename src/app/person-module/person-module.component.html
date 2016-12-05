@@ -5,8 +5,8 @@
 <body>
 <div>
   <label class="labelNameClass"> {{ labelName }}</label>
-  <input class="inputClass" placeholder="      Person Name" #searchByPerson  [(ngModel)]="name">
-  <input class="inputClass" placeholder="      Person Address" #personAddress  [(ngModel)]="address">
+  <input class="inputClass" placeholder="      Person Name" [(ngModel)]="name">
+  <input class="inputClass" placeholder="      Person Address"   [(ngModel)]="address">
   <button class="btn btn-primary" (click)="addPerson()">Add this person</button>
 </div>
 

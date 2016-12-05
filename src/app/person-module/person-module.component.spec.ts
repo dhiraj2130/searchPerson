@@ -1,9 +1,17 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed ,inject } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { PeopleAccessService, AppStore} from './people-access.service';
+import { StoreModule } from '@ngrx/Store';
+import { people } from './home.reducer';
 
 import { PersonModuleComponent } from './person-module.component';
+import { FormsModule } from '@angular/forms';
+
+class MockPeopleAccessService {
+  addPerson(){}
+}
 
 describe('PersonModuleComponent', () => {
   let component: PersonModuleComponent;
@@ -11,7 +19,9 @@ describe('PersonModuleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonModuleComponent ]
+      imports: [ FormsModule ,StoreModule.provideStore({people})],
+      declarations: [ PersonModuleComponent ],
+      providers: [{provide:PeopleAccessService,useClass:MockPeopleAccessService}]
     })
     .compileComponents();
   }));
@@ -22,7 +32,20 @@ describe('PersonModuleComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create and initialise in ngOnInit()', () => {
     expect(component).toBeTruthy();
+    expect(component.labelName).toEqual('Enter Person details to add');
+    expect(component.name).toEqual('');
+    expect(component.address).toEqual('');
+    expect(component.id).toEqual(0);
   });
+
+  it('should access peopleAccessService',inject([PeopleAccessService],(service:PeopleAccessService) =>{
+    expect(service).toBeTruthy();
+   // component.addPerson();
+    //expect(service.addPerson).toHaveBeenCalled();
+  }))
+
+  
+
 });

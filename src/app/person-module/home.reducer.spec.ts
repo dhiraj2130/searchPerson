@@ -9,7 +9,6 @@ describe('home reducer ',() => {
         expect(people(undefined,{})).toEqual([]);
     })
     it('should add value to state',() =>{
-        person:Person = new PersonClass(0,"name1","address1");
         expect(people([],{type:"ADD",payload:this.person})).toEqual([this.person])
     })
 })
