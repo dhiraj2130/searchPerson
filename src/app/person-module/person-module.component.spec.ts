@@ -10,6 +10,7 @@ import { PersonModuleComponent } from './person-module.component';
 import { FormsModule } from '@angular/forms';
 
 class MockPeopleAccessService {
+  constructor(){}
   addPerson(){}
 }
 
@@ -40,10 +41,14 @@ describe('PersonModuleComponent', () => {
     expect(component.id).toEqual(0);
   });
 
-  it('should access peopleAccessService',inject([PeopleAccessService],(service:PeopleAccessService) =>{
+  xit('should access peopleAccessService',inject([PeopleAccessService],(service:PeopleAccessService) =>{
     expect(service).toBeTruthy();
-   // component.addPerson();
-    //expect(service.addPerson).toHaveBeenCalled();
+
+    spyOn(MockPeopleAccessService,'addPerson');
+
+    component.addPerson();
+    fixture.detectChanges();
+    expect(service.addPerson).toHaveBeenCalled();
   }))
 
   
