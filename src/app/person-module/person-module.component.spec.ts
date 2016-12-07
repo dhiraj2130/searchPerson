@@ -50,7 +50,4 @@ describe('PersonModuleComponent', () => {
     fixture.detectChanges();
     expect(service.addPerson).toHaveBeenCalled();
   }))
-
-  
-
 });

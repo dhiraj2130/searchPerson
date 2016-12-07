@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { Store } from '@ngrx/Store';
 import { AppStore } from './people-access.service';
 import { Person,PersonClass } from "./models/Person";
-
+// Mockstore is not working.
 class MockStore {
   constructor(){}
   select(){}
