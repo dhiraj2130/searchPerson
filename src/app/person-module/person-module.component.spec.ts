@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 import { PeopleAccessService, AppStore} from './people-access.service';
 import { StoreModule } from '@ngrx/Store';
 import { people } from './home.reducer';
+import { Person, PersonClass } from './models/Person';
 
 import { PersonModuleComponent } from './person-module.component';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 class MockPeopleAccessService {
   constructor(){}
   addPerson(){}
+    deletePerson(){}
 }
 
 describe('PersonModuleComponent', () => {
@@ -41,13 +43,23 @@ describe('PersonModuleComponent', () => {
     expect(component.id).toEqual(0);
   });
 
-  xit('should access peopleAccessService',inject([PeopleAccessService],(service:PeopleAccessService) =>{
-    expect(service).toBeTruthy();
+  it('should access peopleAccessService',inject([PeopleAccessService],(peopleAccessService) =>{
+    expect(peopleAccessService).toBeTruthy();
 
-    spyOn(MockPeopleAccessService,'addPerson');
-
+    spyOn(peopleAccessService,'addPerson');
+      component.id =0;
+      component.name="name";
+      component.address="address";
+      var person = new PersonClass(0,"name","address");
     component.addPerson();
     fixture.detectChanges();
-    expect(service.addPerson).toHaveBeenCalled();
+    expect(peopleAccessService.addPerson).toHaveBeenCalled();
+
+      expect(peopleAccessService.addPerson).toHaveBeenCalledWith(person);
+
+      spyOn(peopleAccessService,'deletePerson');
+      component.deletePerson(0);
+      fixture.detectChanges();
+      expect(peopleAccessService.deletePerson).toHaveBeenCalled();
   }))
 });

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66efe54-6b9e-4ac4-91b5-8885c852f64e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/searchPerson_node_modules.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/searchPerson.iml" afterPath="$PROJECT_DIR$/.idea/searchPerson.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/person-module/home.reducer.spec.ts" afterPath="$PROJECT_DIR$/src/app/person-module/home.reducer.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/person-module/people-access.service.spec.ts" afterPath="$PROJECT_DIR$/src/app/person-module/people-access.service.spec.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts" afterPath="$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts" />
     </list>
     <ignored path="searchPerson.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +43,8 @@
           <file leaf-file-name="person-module.component.spec.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
-                  <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+                <state relative-caret-position="185">
+                  <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="e#40#121#0" expanded="true" />
@@ -103,9 +98,9 @@
         <option value="$PROJECT_DIR$/src/app/person-module/person-module.component.html" />
         <option value="$PROJECT_DIR$/src/app/person-module/home.reducer.ts" />
         <option value="$PROJECT_DIR$/src/app/person-module/person-module.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts" />
         <option value="$PROJECT_DIR$/src/app/person-module/people-access.service.spec.ts" />
         <option value="$PROJECT_DIR$/src/app/person-module/home.reducer.spec.ts" />
+        <option value="$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts" />
       </list>
     </option>
   </component>
@@ -381,12 +376,12 @@
       <workItem from="1480769438726" duration="3223000" />
       <workItem from="1480892467070" duration="7763000" />
       <workItem from="1480976360378" duration="7014000" />
-      <workItem from="1481014831679" duration="2624000" />
+      <workItem from="1481014831679" duration="4284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42081000" />
+    <option name="totallyTimeSpent" value="43741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -847,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/person-module/person-module.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="185">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#40#121#0" expanded="true" />
