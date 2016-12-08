@@ -4,20 +4,43 @@ header {
   align-self: center;
 
 }
-body{
-  margin:20px;
-  color:red;
-  font-family: Helvetica;
-  font-size: large;
-  align-self: center;
-
+//body{
+//  margin:20px;
+//  font-family: Helvetica;
+//  font-size: large;
+//  align-self: center;
+  input:checked + label {
+    font-style : italic;
+  }
+  fieldset {
+    border:none;
+    margin:0;
+    padding:8px;
+  }
+  fieldset:disabled{
+    opacity: 0.5;
+  }
+  .text{
+    border:1px solid #bbb;
+  }
   .labelNameClass{
     color:#0000cc;
   }
+  input:focus {
+    outline:none;
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.2);
+    border : 1px solid #bbbbbb;
+  }
+  input:invalid {
+    border-color : red;
+  }
+input:required {
+  border-width : 2px;
+}
   .inputClass{
     border-color: #0000cc;
     border-radius: 5px;
     margin:5px;
     height:30px;
   }
-}
+//}

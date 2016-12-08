@@ -1,15 +1,32 @@
+<link rel="stylesheet" href="person-module.component.scss">
 <header>
   <h2 align="center">Search Application</h2>
 
 </header>
 <body>
-<div>
-  <label class="labelNameClass"> {{ labelName }}</label>
-  <input class="inputClass" placeholder="      Person Name" [(ngModel)]="name">
-  <input class="inputClass" placeholder="      Person Address"   [(ngModel)]="address">
-  <button class="btn btn-primary" (click)="addPerson()">Add this person</button>
-</div>
 
+    <form>
+
+     <fieldset>
+  <label for="personName">Person Name</label>
+  <input class="text" id="personName" name="personName" placeholder="Person Name" [(ngModel)]="name" required >
+        </fieldset>
+        <fieldset>
+        <label for="personEmailAddress">Person Address</label>
+  <input type="email" id="personEmailAddress" name="personEmailAddress" placeholder="Person Email Address"   [(ngModel)]="address" >
+        </fieldset>
+        <fieldset disabled>
+            <label for="city">city</label>
+            <input class="text" id="city" name="city" placeholder="for demo">
+        </fieldset>
+        <fieldset>
+            <input type="radio" id="male" name="Male">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="feMale">
+            <label for="female"fe>female</label>
+        </fieldset>
+            <button type="submit" class="btn btn-primary" (click)="addPerson()">Add this person</button>
+    </form>
   <div *ngFor="let person of (personList | async )">
     <span class="col-sm-1"> {{ person.id }} </span>
     <span class="col-sm-2">  {{ person.name}} </span>
